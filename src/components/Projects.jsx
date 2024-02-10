@@ -1,20 +1,31 @@
-import placeholder from "../assets/portfolio/placeholder.png";
+import moshify from "../assets/images/moshify.png";
+import gamehub from "../assets/images/gamehub.webp";
+import vidly from "../assets/images/vidly.png";
 
 const Projects = () => {
   const portfolios = [
     {
       id: 1,
-      src: placeholder,
+      name: "Moshify",
+      src: moshify,
+      github: "https://github.com/adithya61/Moshify",
+      live: "https://moshify-web-project.netlify.app/",
     },
 
     {
       id: 2,
-      src: placeholder,
+      name: "Gamehub",
+      src: gamehub,
+      github: "https://github.com/adithya61/GameHub",
+      live: "https://videogameshub.netlify.app/",
     },
 
     {
       id: 3,
-      src: placeholder,
+      name: "Vidly",
+      src: vidly,
+      github: "https://github.com/adithya61/vidly",
+      live: "https://vidly-react-project.netlify.app/",
     },
   ];
 
@@ -43,7 +54,7 @@ const Projects = () => {
           gap-8 px-12 sm:p-0"
         >
           {/* card */}
-          {portfolios.map(({ id, src }) => (
+          {portfolios.map(({ id, name, github, live, src }) => (
             <div key={id} className=" shadow-md shadow-gray-600 rounded-lg">
               <img
                 className="rounded-md duration-200
@@ -51,27 +62,34 @@ const Projects = () => {
                 src={src}
                 alt=""
               />
+              <p className=" m-2 text-xl font-bold">{name}</p>
               <div
                 className="flex items-center justify-center 
             "
               >
-                <button
+                <a
+                  href={live}
                   className=" w-1/2 px-6 py-3 m-4 
-              duration-200 hover:scale-105"
+              duration-200 hover:scale-105 bg-gradient-to-r
+               from-cyan-500 to-blue-500 rounded-lg
+                 text-center"
                 >
                   Live
-                </button>
-                <button
+                </a>
+                <a
+                  href={github}
                   className=" w-1/2 px-6 py-3 m-4 
-              duration-200 hover:scale-105"
+              duration-200 hover:scale-105 bg-gradient-to-r
+               from-cyan-400 to-blue-500 rounded-lg
+                text-center"
                 >
                   Github
-                </button>
+                </a>
               </div>
             </div>
           ))}
         </div>
-        
+
         {/* Card end */}
       </div>
     </div>

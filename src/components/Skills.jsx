@@ -1,9 +1,11 @@
-import html from "../assets/skills/html.png";
-import css from "../assets/skills/css.png";
-import github from "../assets/skills/github.png";
-import javascript from "../assets/skills/javascript.png";
-import react from "../assets/skills/react.png";
-import tailwind from "../assets/skills/tailwind.png";
+import html from "../assets/images/html.png";
+import css from "../assets/images/css.png";
+import github from "../assets/images/github.png";
+import javascript from "../assets/images/javascript.png";
+import react from "../assets/images/react.png";
+import tailwind from "../assets/images/tailwind.png";
+import typescript from "../assets/images/typescript.png";
+
 
 const Skills = () => {
   const skills = [
@@ -43,6 +45,12 @@ const Skills = () => {
       title: "Tailwind",
       style: "shadow-sky-400",
     },
+    {
+        id: 7,
+        src: typescript,
+        title: "Typescript",
+        style: "shadow-sky-600",
+      },
   ];
 
   return (

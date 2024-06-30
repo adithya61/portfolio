@@ -19,19 +19,23 @@ const About = () => {
           </p>
         </div>
         <p className="text-xl mt-20">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur
-          expedita quo porro, eos ex necessitatibus minus provident dolorum aut
-          esse saepe doloremque ipsa veritatis reiciendis. Et possimus mollitia
-          veniam earum dolorum expedita qui laboriosam animi, reprehenderit
-          consectetur cum atque at deserunt beatae sit hic obcaecati! Ipsum unde
-          sequi repudiandae omnis.
+          🚀 Passionate web developer experienced in front end development, with
+          expertise in JavaScript, ReactJS, and data structures algorithms.
+          <br />
+          Seeking opportunities to leverage my skills and contribute to
+          innovative projects. 🎯 Developing web applications using HTML5, CSS3,
+          and ReactJS, ensuring seamless user authentication and efficient data
+          representation.
         </p>
         <br />
         <p className="text-xl">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat eius
-          rerum obcaecati tempore cum quibusdam autem velit dolorem consequatur,
-          ipsum, sunt doloremque illo amet deserunt temporibus facilis beatae
-          repellat ipsa.
+          💡 Successfully deployed cloud-based applications for scalability and
+          enhanced user experience, utilising technologies such as, MongoDB, and
+          GCP cloud services. 
+          <br />
+          🔬 Analytical mindset with a demonstrated ability
+          to extract insights from large datasets, showcased through the
+          development of ML models for predicting defaulters and non-defaulters.
         </p>
       </div>
     </div>

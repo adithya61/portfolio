@@ -69,18 +69,18 @@ const Projects = () => {
               >
                 <a
                   href={live}
-                  className=" w-1/2 px-6 py-3 m-4 
+                  className=" w-1/3 py-2 m-4 
               duration-200 hover:scale-105 bg-gradient-to-r
-               from-cyan-500 to-blue-500 rounded-lg
+               from-cyan-300 to-blue-400 rounded-lg
                  text-center"
                 >
                   Live
                 </a>
                 <a
                   href={github}
-                  className=" w-1/2 px-6 py-3 m-4 
+                  className=" w-1/3 py-2 m-4 
               duration-200 hover:scale-105 bg-gradient-to-r
-               from-cyan-400 to-blue-500 rounded-lg
+               from-blue-400 to-cyan-300  rounded-lg
                 text-center"
                 >
                   Github

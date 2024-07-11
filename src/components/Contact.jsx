@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div name="contact" className=" text-white w-full h-fit p-20">
+    <div name="contact" className=" text-white w-full h-fit">
       <div
         className="flex flex-col p-4 justify-center max-w-screen-lg
       mx-auto h-full"
@@ -17,21 +17,21 @@ const Contact = () => {
           <form
             action="https://getform.io/f/34bce18a-722a-473b-8c5b-d98d095c1cdf"
             method="POST"
-            className="flex flex-col w-full md:w-3/4"
+            className="flex flex-col w-full md:w-3/4 "
           >
             <input
               type="text"
               name="Name"
               placeholder="Enter your name"
               className=" p-2 bg-transparent border border-white text-white border-opacity-50
-               focus:outline-none"
+               focus:outline-plum"
             />
             <input
               type="text"
               name="Email"
               placeholder="Enter your Email"
               className=" my-4 p-2 bg-transparent border border-white border-opacity-50 text-white
-               focus:outline-none"
+               focus:outline-plum"
             />
             <textarea
               placeholder="Enter your message"
@@ -40,7 +40,7 @@ const Contact = () => {
               className="
              p-2 rounded-md bg-transparent border
               border-white border-opacity-50
-              text-white focus:outline-none"
+              text-white focus:outline-plum"
             ></textarea>
             <button
               type="submit"

@@ -55,10 +55,10 @@ const Projects = () => {
       name="projects"
       className=" text-white
       w-full
-     md:h-fit p-20"
+     md:h-fit mt-12"
     >
       <div
-        className=" max-w-screen-lg p-4 mx-auto
+        className=" max-w-screen-xl p-4 mx-auto
       flex flex-col justify-center w-full h-full"
       >
         <div className="pb-8">
@@ -73,7 +73,7 @@ const Projects = () => {
         {/* cards */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 row-auto
-          gap-8 px-10 sm:p-0"
+          gap-8  px-0 md:px-10"
         >
           {projects.map((project) => (
             <div

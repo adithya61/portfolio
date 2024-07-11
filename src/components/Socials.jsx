@@ -6,7 +6,7 @@ const Socials = () => {
       id: 1,
       child: (
         <>
-          LinkedIn <FaLinkedin size={30} />
+          LinkedIn <FaLinkedin size={30} fill="blue" />
         </>
       ),
       href: "https://www.linkedin.com/in/adithya61/",
@@ -16,7 +16,7 @@ const Socials = () => {
       id: 2,
       child: (
         <>
-          Github <FaGithub size={30} />
+          Github <FaGithub size={30} fill="charcol" />
         </>
       ),
       href: "https://www.github.com/adithya61/",
@@ -25,7 +25,7 @@ const Socials = () => {
       id: 3,
       child: (
         <>
-          Mail <CiMail size={30} />
+          Mail <CiMail size={30} fill="tomato" />
         </>
       ),
       href: "zonic662@gmail.com",
@@ -33,16 +33,15 @@ const Socials = () => {
   ];
 
   return (
-    <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
+    <div className="hidden lg:flex flex-col top-[35%] left-0 fixed ">
       <ul>
         {links.map(({ id, child, href }) => (
           <li
             key={id}
             className="flex
          justify-between items-center w-40 h-14 
-         px-4 bg-gray-500 ml-[-100px]
-          hover:ml-0 hover:rounded-md duration-300
-           hover:rounded-md"
+         px-4 bg-beige ml-[-100px]
+          hover:ml-0 hover:rounded-md duration-300 border-b-2 border-gray-300"
           >
             <a
               href={href}

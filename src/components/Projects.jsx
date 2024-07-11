@@ -1,31 +1,52 @@
-import moshify from "../assets/images/moshify.png";
-import gamehub from "../assets/images/gamehub.webp";
-import vidly from "../assets/images/vidly.png";
+import { FiGithub } from "react-icons/fi";
+import { CiYoutube } from "react-icons/ci";
 
 const Projects = () => {
-  const portfolios = [
+  const projects = [
     {
       id: 1,
-      name: "Moshify",
-      src: moshify,
-      github: "https://github.com/adithya61/Moshify",
-      live: "https://moshify-web-project.netlify.app/",
+      "project-name": "Gamehub",
+      "video-status": true,
+      "github-link": "https://github.com/adithya61/GameHub",
+      "video-link": "https://youtu.be/u8r9gBMkwn8",
+      "desc-1": "A video game listing website.",
+      "desc-2": "A video game database and discovery website",
+      "tech-stack": "ReactJs,TypeScript,JavaScript,Chakra UI",
+      "live-link": "https://videogameshub.netlify.app/",
     },
-
     {
       id: 2,
-      name: "Gamehub",
-      src: gamehub,
-      github: "https://github.com/adithya61/GameHub",
-      live: "https://videogameshub.netlify.app/",
+      "project-name": "Moshify",
+      "video-status": true,
+      "github-link": "https://github.com/adithya61/moshify",
+      "video-link": "https://youtu.be/vzGXDuYgdr0",
+      "desc-1": "Web Hosting on the cloud",
+      "desc-2": "Static page with plain HTML, CSS",
+      "tech-stack": "HTML, CSS, animate-on-scroll (js library)",
+      "live-link": "https://moshify-web-project.netlify.app/",
     },
-
     {
       id: 3,
-      name: "Vidly",
-      src: vidly,
-      github: "https://github.com/adithya61/vidly",
-      live: "https://vidly-react-project.netlify.app/",
+      "project-name": "Intract",
+      "video-status": false,
+      "github-link": "https://github.com/adithya61/Cryptomeme",
+      "video-link": "",
+      "desc-1": "Crypto Interactive learning Frontend Design Clone",
+      "desc-2": "Replicates UI/UX elements and interactions.",
+      "tech-stack": "Reactjs, CSS, TailwindCSS, ",
+      "live-link": "https://cryptomeme.netlify.app/",
+    },
+    {
+      id: 4,
+      "project-name": "Vidly",
+      "video-status": true,
+      "github-link": "https://github.com/adithya61/vidly",
+      "video-link": "https://www.youtube.com/watch?v=AJsV4LWzBRg",
+      "desc-1": "A Video Rental Website",
+      "desc-2": "Clean Coding, Performance Optimization",
+      "tech-stack":
+        "Reactjs, GCP (backend hosting) jwt (auth), joi (form validation), sentry (error monitoring), mongodb (database)",
+      "live-link": "https://vidly-react-project.netlify.app/",
     },
   ];
 
@@ -33,8 +54,8 @@ const Projects = () => {
     <div
       name="projects"
       className=" text-white
-     bg-gradient-to-b from-black to-gray-800 w-full
-     md:h-screen"
+      w-full
+     md:h-fit p-20"
     >
       <div
         className=" max-w-screen-lg p-4 mx-auto
@@ -42,49 +63,74 @@ const Projects = () => {
       >
         <div className="pb-8">
           <p
-            className=" text-4xl font-bold inline
-           border-b-4 border-gray-500 "
+            className=" heading text-4xl font-bold inline
+           border-b-4 border-gray-500 text-beige"
           >
             Projects
           </p>
           <p className="py-6">Check out some of my work right here.</p>
         </div>
+        {/* cards */}
         <div
-          className="grid sm:grid-cols-2 md:grid-cols-3
-          gap-8 px-12 sm:p-0"
+          className="grid grid-cols-1 md:grid-cols-2 row-auto
+          gap-8 px-10 sm:p-0"
         >
-          {/* card */}
-          {portfolios.map(({ id, name, github, live, src }) => (
-            <div key={id} className=" shadow-md shadow-gray-600 rounded-lg">
-              <img
-                className="rounded-md duration-200
-            hover:scale-105"
-                src={src}
-                alt=""
-              />
-              <p className=" m-2 text-xl font-bold">{name}</p>
-              <div
-                className="flex items-center justify-center 
-            "
-              >
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className=" w-full border-[1px] rounded-md border-purple-100"
+            >
+              <div className="flex justify-end items-center gap-7 px-5 py-3">
+                <span className=" ">
+                  <a
+                    href={project["live-link"]}
+                    className="cursor-pointer
+                        border-mango text-sm font-medium text-mango rounded-md "
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live
+                  </a>
+                </span>
                 <a
-                  href={live}
-                  className=" w-1/3 py-2 m-4 
-              duration-200 hover:scale-105 bg-gradient-to-r
-               from-cyan-300 to-blue-400 rounded-lg
-                 text-center"
+                  href={project["github-link"]}
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  Live
+                  <FiGithub
+                    className="cursor-pointer"
+                    size={"30"}
+                    color="#fcba28"
+                  />
                 </a>
-                <a
-                  href={github}
-                  className=" w-1/3 py-2 m-4 
-              duration-200 hover:scale-105 bg-gradient-to-r
-               from-blue-400 to-cyan-300  rounded-lg
-                text-center"
-                >
-                  Github
-                </a>
+                {project["video-status"] && (
+                  <a
+                    href={project["video-link"]}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <CiYoutube
+                      className="cursor-pointer"
+                      size={"30"}
+                      color="#fcba28"
+                    />
+                  </a>
+                )}
+              </div>
+              {/* content */}
+              <div className="flex flex-col items-start px-5 grotesk">
+                <span className="text-2xl project-head pb-3">
+                  {project["project-name"]}
+                </span>
+                <span className="text-lg text-[#40cdf4] pt-1 mt-2">
+                  {project["desc-1"]}
+                </span>
+                <span className="text-lg text-[#40cdf4]">
+                  {project["desc-2"]}
+                </span>{" "}
+                <span className="text-base text-paleGreen pt-4 pb-5">
+                  {project["tech-stack"]}
+                </span>
               </div>
             </div>
           ))}

@@ -6,7 +6,6 @@ import react from "../assets/images/react.png";
 import tailwind from "../assets/images/tailwind.png";
 import typescript from "../assets/images/typescript.png";
 
-
 const Skills = () => {
   const skills = [
     {
@@ -46,19 +45,15 @@ const Skills = () => {
       style: "shadow-sky-400",
     },
     {
-        id: 7,
-        src: typescript,
-        title: "Typescript",
-        style: "shadow-sky-600",
-      },
+      id: 7,
+      src: typescript,
+      title: "Typescript",
+      style: "shadow-sky-600",
+    },
   ];
 
   return (
-    <div
-      name="skills"
-      className=" bg-gradient-to-b
-      from-gray-800 to-black w-full h-screen"
-    >
+    <div name="skills" className=" w-full h-fit p-20">
       <div
         className=" max-w-screen-lg mx-auto
        p-4 flex flex-col justify-center w-full h-full
@@ -66,8 +61,8 @@ const Skills = () => {
       >
         <div>
           <p
-            className=" text-4xl font-bold border-b-4
-           border-gray-500 p-2 inline"
+            className=" heading text-4xl font-bold border-b-4
+           border-gray-500 p-2 inline text-beige"
           >
             Skills
           </p>

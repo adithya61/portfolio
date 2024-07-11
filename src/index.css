@@ -8,7 +8,84 @@
 
 @layer base {
   html {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
+    background-color: #100d0e;
   }
 }
 
+.nav-text {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero-text {
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background: rgb(137, 183, 240);
+  background: linear-gradient(
+    90deg,
+    rgba(137, 183, 240, 1) 0%,
+    rgba(3, 228, 240, 1) 47%,
+    rgba(0, 212, 255, 1) 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* <weight>: Use a value from 400 to 900 */
+.description {
+  font-family: serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.heading {
+  font-weight: 500;
+}
+
+.project-head {
+  font-weight: 700;
+  background: #ffea00;
+  background: linear-gradient(to bottom, #ffea00 0%, #ff5733 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 300 to 700 */
+
+.grotesk {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.name {
+  background: -webkit-linear-gradient(90deg, #ff7170 -50.34%, #ffe57f 100.78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.group {
+  background-image: linear-gradient(
+    50deg,
+    hsl(267deg 92% 70%) 0%,
+    hsl(267deg 94% 69%) 10%,
+    hsl(267deg 95% 68%) 20%,
+    hsl(267deg 97% 66%) 30%,
+    hsl(267deg 98% 65%) 40%,
+    hsl(267deg 99% 64%) 50%,
+    hsl(267deg 96% 66%) 60%,
+    hsl(267deg 92% 68%) 70%,
+    hsl(267deg 87% 70%) 80%,
+    hsl(267deg 82% 71%) 90%,
+    hsl(267deg 76% 73%) 100%
+  );
+
+  border-top-color: #9370db;
+  border-left-color: #9370db;
+}

@@ -1,6 +1,5 @@
 import heroImage from "../assets/images/profile_picture.png";
 import { Link } from "react-scroll";
-import resume from "../assets/resume/Front_End.pdf";
 
 const Home = () => {
   return (
@@ -42,7 +41,9 @@ const Home = () => {
               Projects
             </Link>
             <a
-              href={resume}
+              href="https://bit.ly/adithya61"
+              target="_blank"
+              rel="noreferrer"
               className=" group text-lg text-white font-semibold w-fit px-5 py-1
                  my-2 flex items-center rounded-lg border-r-4 border-b-4
                   border-b-white border-l-[1px] border-t-[1px]

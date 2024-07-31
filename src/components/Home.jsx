@@ -41,7 +41,7 @@ const Home = () => {
               Projects
             </Link>
             <a
-              href="https://bit.ly/adithya61"
+              href="https://chiti.netlify.app/assets/resume.pdf"
               target="_blank"
               rel="noreferrer"
               className=" group text-lg text-white font-semibold w-fit px-5 py-1

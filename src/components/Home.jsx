@@ -64,11 +64,16 @@ const Home = () => {
             >
               <FaLinkedin size={30} />
             </a>
-            <a href="https://github.com/adithya61/" rel="noopener noreferrer">
+            <a
+              href="https://github.com/adithya61/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub size={30} />
             </a>
             <a
               href="https://leetcode.com/u/adithya61/"
+              target="_blank"
               rel="noopener noreferrer"
             >
               <SiLeetcode size={30} />

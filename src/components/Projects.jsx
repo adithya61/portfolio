@@ -68,7 +68,6 @@ const Projects = () => {
           >
             Projects
           </p>
-          <p className="py-6">Check out some of my work right here.</p>
         </div>
         {/* cards */}
         <div
@@ -87,7 +86,7 @@ const Projects = () => {
                     className="cursor-pointer
                         border-mango text-sm font-medium text-mango rounded-md "
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
                     Live
                   </a>
@@ -95,7 +94,7 @@ const Projects = () => {
                 <a
                   href={project["github-link"]}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <FiGithub
                     className="cursor-pointer"
@@ -107,7 +106,7 @@ const Projects = () => {
                   <a
                     href={project["video-link"]}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
                     <CiYoutube
                       className="cursor-pointer"

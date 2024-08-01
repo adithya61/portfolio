@@ -1,5 +1,7 @@
 import heroImage from "../assets/images/profile_picture.png";
 import { Link } from "react-scroll";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const Home = () => {
   return (
@@ -43,7 +45,7 @@ const Home = () => {
             <a
               href="https://chiti.netlify.app/assets/resume.pdf"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className=" group text-lg text-white font-semibold w-fit px-5 py-1
                  my-2 flex items-center rounded-lg border-r-4 border-b-4
                   border-b-white border-l-[1px] border-t-[1px]
@@ -51,6 +53,25 @@ const Home = () => {
                  cursor-pointer"
             >
               Resume
+            </a>
+          </div>
+          {/* Socials */}
+          <div className="flex gap-4">
+            <a
+              href="https://www.linkedin.com/in/adithya61/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin size={30} />
+            </a>
+            <a href="https://github.com/adithya61/" rel="noopener noreferrer">
+              <FaGithub size={30} />
+            </a>
+            <a
+              href="https://leetcode.com/u/adithya61/"
+              rel="noopener noreferrer"
+            >
+              <SiLeetcode size={30} />
             </a>
           </div>
         </div>

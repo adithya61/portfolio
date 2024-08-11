@@ -1,5 +1,5 @@
 import { FiGithub } from "react-icons/fi";
-import { CiYoutube } from "react-icons/ci";
+import { FaYoutube } from "react-icons/fa";
 
 const Projects = () => {
   const projects = [
@@ -55,7 +55,7 @@ const Projects = () => {
       name="projects"
       className=" text-white
       w-full
-     md:h-fit mt-12"
+     md:h-fit mt-12 projects-heading"
     >
       <div
         className=" max-w-screen-xl p-4 mx-auto
@@ -79,48 +79,53 @@ const Projects = () => {
               key={project.id}
               className=" w-full border-[1px] rounded-md border-purple-100"
             >
-              <div className="flex justify-end items-center gap-7 px-5 py-3">
-                <span className=" ">
+              <div className="flex flex-row justify-between px-5 py-5">
+                <div>
+                  <span className="text-2xl project-head pb-3">
+                    {project["project-name"]}
+                  </span>
+                </div>
+                <div className="flex justify-end items-center gap-7 ">
+                  <span className=" ">
+                    <a
+                      href={project["live-link"]}
+                      className="cursor-pointer
+                        border-mango text-sm font-medium text-blue-400 underline rounded-md "
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live
+                    </a>
+                  </span>
                   <a
-                    href={project["live-link"]}
-                    className="cursor-pointer
-                        border-mango text-sm font-medium text-mango rounded-md "
+                    href={project["github-link"]}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Live
-                  </a>
-                </span>
-                <a
-                  href={project["github-link"]}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FiGithub
-                    className="cursor-pointer"
-                    size={"30"}
-                    color="#fcba28"
-                  />
-                </a>
-                {project["video-status"] && (
-                  <a
-                    href={project["video-link"]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <CiYoutube
+                    <FiGithub
                       className="cursor-pointer"
                       size={"30"}
-                      color="#fcba28"
+                      color="lightGray"
                     />
                   </a>
-                )}
+                  {project["video-status"] && (
+                    <a
+                      href={project["video-link"]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaYoutube
+                        className="cursor-pointer"
+                        size={"30"}
+                        color="tomato"
+                      />
+                    </a>
+                  )}
+                </div>
               </div>
+
               {/* content */}
               <div className="flex flex-col items-start px-5 grotesk">
-                <span className="text-2xl project-head pb-3">
-                  {project["project-name"]}
-                </span>
                 <span className="text-lg text-[#40cdf4] pt-1 mt-2">
                   {project["desc-1"]}
                 </span>

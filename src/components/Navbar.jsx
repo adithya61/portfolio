@@ -32,7 +32,7 @@ const Navbar = () => {
     <div
       className="flex  justify-between items-center w-full 
       h-20 text-white fixed
-     px-4"
+     px-20"
     >
       <h1 className="text-5xl font-signature ml-2">Adithya</h1>
       <ul className="hidden md:flex">
@@ -40,7 +40,7 @@ const Navbar = () => {
           <li
             key={link.id}
             className="px-4 cursor-pointer capitalize nav-text
-            text-honeyDew font-light hover:scale-110 hover:text-white duration-200
+            text-honeyDew font-light hover:scale-110 hover:text-gray-300 hover:underline duration-200
             "
           >
             <Link to={link.name} smooth duration={500}>

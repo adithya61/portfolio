@@ -61,6 +61,7 @@ const Home = () => {
               href="https://www.linkedin.com/in/adithya61/"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:bg-[#ff6347] px-2 py-2 rounded-lg"
             >
               <FaLinkedin size={30} />
             </a>
@@ -68,6 +69,7 @@ const Home = () => {
               href="https://github.com/adithya61/"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:bg-[#ff6347] px-2 py-2 rounded-lg"
             >
               <FaGithub size={30} />
             </a>
@@ -75,6 +77,7 @@ const Home = () => {
               href="https://leetcode.com/u/adithya61/"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:bg-[#ff6347] px-2 py-2 rounded-lg"
             >
               <SiLeetcode size={30} />
             </a>

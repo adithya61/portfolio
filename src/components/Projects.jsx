@@ -85,12 +85,15 @@ const Projects = () => {
                     {project["project-name"]}
                   </span>
                 </div>
-                <div className="flex justify-end items-center gap-7 ">
-                  <span className=" ">
+                <div className="flex justify-end items-center gap-3">
+                  <span
+                    className="hover:bg-blue-300 hover:bg-opacity-20 rounded-lg px-2 py-1
+                  "
+                  >
                     <a
                       href={project["live-link"]}
                       className="cursor-pointer
-                        border-mango text-sm font-medium text-blue-400 underline rounded-md "
+                        border-mango text-sm no-underline hover:underline font-medium text-blue-400 underline rounded-md"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -101,9 +104,10 @@ const Projects = () => {
                     href={project["github-link"]}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="px-2 py-2 hover:bg-gray-300 rounded-lg hover:bg-opacity-20"
                   >
                     <FiGithub
-                      className="cursor-pointer"
+                      className="cursor-pointer "
                       size={"30"}
                       color="lightGray"
                     />
@@ -113,6 +117,7 @@ const Projects = () => {
                       href={project["video-link"]}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="px-2 py-2 hover:bg-[#ff6347] hover:bg-opacity-20 rounded-lg"
                     >
                       <FaYoutube
                         className="cursor-pointer"

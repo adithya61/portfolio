@@ -2,6 +2,25 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
+.abeezee-regular {
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.abeezee-regular-italic {
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-mono-special {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -46,7 +65,6 @@
 .heading {
   font-weight: 500;
 }
-
 
 /* <uniquifier>: Use a unique and descriptive class name */
 /* <weight>: Use a value from 300 to 700 */

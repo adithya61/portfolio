@@ -40,7 +40,7 @@ const Socials = () => {
             key={id}
             className="flex
          justify-between items-center w-40 h-14 
-         px-4 bg-[#F2F4FF] ml-[-100px]
+         px-4 bg-honeyDew ml-[-100px]
           hover:ml-0 hover:rounded-md duration-300 border-b-2 border-gray-300"
           >
             <a

@@ -25,7 +25,7 @@ const Home = () => {
           <h2 className=" text-4xl md:text-5xl lg:text-3xl font-bold name ">
             Adithya T R
           </h2>
-          <p className=" text-[#c77dff] pt-8 pb-8 font-medium  max-w-xl grotesk text-lg">
+          <p className=" text-red-400 pt-8 pb-8 font-medium  max-w-xl grotesk text-lg">
             I love to work on Web Application&apos;s with technologies like
             Reactjs, Javascript, Typescript, HTML, CSS.
           </p>

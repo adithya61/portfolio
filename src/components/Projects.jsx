@@ -146,10 +146,10 @@ const Projects = () => {
 
               {/* content */}
               <div className="flex flex-col items-start px-5 grotesk">
-                <span className="text-lg text-[#ffc300] pt-1 mt-2">
+                <span className="text-base text-white pt-1 mt-2 roboto-mono-special">
                   {project["desc-1"]}
                 </span>
-                <span className="text-lg text-[#ffc300]">
+                <span className="text-base text-white roboto-mono-special">
                   {project["desc-2"]}
                 </span>{" "}
                 <span className="text-base text-paleGreen pt-4 pb-5">

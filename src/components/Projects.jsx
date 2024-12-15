@@ -96,7 +96,7 @@ const Projects = () => {
             >
               <div className="flex flex-row justify-between px-5 py-5">
                 <div>
-                  <span className="text-2xl project-head pb-3">
+                  <span className="text-2xl font-semibold text-indigo-400 pb-3">
                     {project["project-name"]}
                   </span>
                 </div>
@@ -112,7 +112,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                        Live
+                      Live
                     </a>
                   </span>
                   <a
@@ -146,10 +146,10 @@ const Projects = () => {
 
               {/* content */}
               <div className="flex flex-col items-start px-5 grotesk">
-                <span className="text-lg text-[#40cdf4] pt-1 mt-2">
+                <span className="text-lg text-[#ffc300] pt-1 mt-2">
                   {project["desc-1"]}
                 </span>
-                <span className="text-lg text-[#40cdf4]">
+                <span className="text-lg text-[#ffc300]">
                   {project["desc-2"]}
                 </span>{" "}
                 <span className="text-base text-paleGreen pt-4 pb-5">

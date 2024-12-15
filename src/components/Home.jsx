@@ -14,31 +14,29 @@ const Home = () => {
         className=" flex flex-col md:flex-row justify-center items-center px-0 md:px-20 lg:px-auto
         gap-[3rem] md:gap-[5rem] lg:gap-[5rem]"
       >
-        <div className="w-[100%] lg:w-auto px-8 lg:px-20 md:px-0 object-cover">
+        <div className="w-[100%] lg:w-auto px-8 lg:px-20 md:px-0">
           <img
             src={heroImage}
             alt="Adithya's photo"
-            className=" rounded-2xl border-r-[6px] 
-            border-b-[6px] border-white lg:h-[20rem]"
+            className=" rounded-full size-52 object-cover object-center"
           />
         </div>
-        <div className="flex flex-col justify-center items-start h-full px-4 md:px-0 md:mt-[3rem] text-beige">
-          <h2 className=" text-4xl md:text-5xl lg:text-5xl font-bold name">
+        <div className="flex flex-col justify-center items-start h-full px-4 md:px-0 md:mt-[3rem]">
+          <h2 className=" text-4xl md:text-5xl lg:text-3xl font-bold name ">
             Adithya T R
           </h2>
-          <p className=" text-gray-300 pt-12 pb-8 hero-text  max-w-xl grotesk text-xl">
+          <p className=" text-[#c77dff] pt-8 pb-8 font-medium  max-w-xl grotesk text-lg">
             I love to work on Web Application&apos;s with technologies like
             Reactjs, Javascript, Typescript, HTML, CSS.
           </p>
           {/* Button */}
-          <div className="flex flex-row justify-between gap-8 sm:mb-5">
+          <div className="flex flex-row justify-between gap-7 sm:mb-6">
             <Link
               to="projects"
               smooth
               duration={500}
-              className=" group text-lg text-white font-medium w-fit px-5 py-1
-                 my-2 flex items-center rounded-lg  border-r-4 border-b-4
-                 cursor-pointer border-l-[1px] border-t-[1px]  bg-violet-600 hover:bg-violet-500"
+              className=" group text-lg text-black font-medium w-fit px-5 py-1
+                 my-2 flex items-center rounded-lg  bg-[#FEFEFF] hover:bg-gray-200 cursor-pointer"
             >
               Projects
             </Link>
@@ -46,23 +44,22 @@ const Home = () => {
               href="https://chiti.netlify.app/assets/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className=" group text-lg text-white font-medium w-fit px-5 py-1
-                 my-2 flex items-center rounded-lg border-r-4 border-b-4
-                  border-b-white border-l-[1px] border-t-[1px]
-                 cursor-pointer bg-violet-600 hover:bg-violet-500 "
+              className=" group text-lg text-gray-950 font-medium w-fit px-5 py-1
+                 my-2 flex items-center rounded-lg 
+                 cursor-pointer bg-[#FEFEFF] hover:bg-slate-200 "
             >
               Resume
             </a>
           </div>
           {/* Socials */}
-          <div className="flex gap-4">
+          <div className="flex gap-5">
             <a
               href="https://www.linkedin.com/in/adithya61/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white hover:bg-gray-200 px-2 py-2 rounded-lg"
             >
-              <FaLinkedin color="blue" size={30} />
+              <FaLinkedin color="black" size={25} />
             </a>
             <a
               href="https://github.com/adithya61/"
@@ -70,7 +67,7 @@ const Home = () => {
               rel="noopener noreferrer"
               className="bg-white hover:bg-gray-200 px-2 py-2 rounded-lg"
             >
-              <FaGithub size={30} color="black" />
+              <FaGithub size={25} color="black" />
             </a>
             <a
               href="https://leetcode.com/u/adithya61/"
@@ -78,7 +75,7 @@ const Home = () => {
               rel="noopener noreferrer"
               className=" bg-white hover:bg-gray-200 px-2 py-2 rounded-lg"
             >
-              <SiLeetcode size={30} color="black" />
+              <SiLeetcode size={25} color="black" />
             </a>
           </div>
         </div>

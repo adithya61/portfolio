@@ -9,7 +9,7 @@
 @layer base {
   html {
     font-family: "Raleway", sans-serif;
-    background-color: #100d0e;
+    background-color: #000;
   }
 }
 
@@ -47,13 +47,6 @@
   font-weight: 500;
 }
 
-.project-head {
-  font-weight: 700;
-  background: #ffea00;
-  background: linear-gradient(to bottom, #ffea00 0%, #ff5733 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 /* <uniquifier>: Use a unique and descriptive class name */
 /* <weight>: Use a value from 300 to 700 */

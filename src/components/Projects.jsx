@@ -5,17 +5,32 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      "project-name": "Awwwards",
+      "video-status": false,
+      "github-link": "https://github.com/adithya61/zentry",
+      "video-link": "",
+      "desc-1":
+        "Collaborative Universe: Zentry is a vibrant, content-rich ecosystem that connects users through games, social platforms, and various experiences.",
+      "desc-2":
+        "Unified Play Economy: It aims to unite gamers from diverse backgrounds into a singular, rewarding gaming experience.",
+      "tech-stack": "ReactJs, Gsap (animation lib.), TailwindCSS, javascript",
+      "live-link": "https://awwwardss.netlify.app/",
+    },
+    {
+      id: 2,
       "project-name": "Gamehub",
       "video-status": true,
       "github-link": "https://github.com/adithya61/GameHub",
       "video-link": "https://youtu.be/u8r9gBMkwn8",
-      "desc-1": "A video game listing website.",
-      "desc-2": "A video game database and discovery website",
+      "desc-1":
+        "Personalized Recommendations: The platform offers tailored game suggestions based on user preferences, enhancing the gaming experience and helping users connect with friends.",
+      "desc-2":
+        "Comprehensive Game Database: RAWG is the largest video game database, featuring over 500,000 games, allowing users to discover and track their favorite titles easily.",
       "tech-stack": "ReactJs,TypeScript,JavaScript,Chakra UI",
       "live-link": "https://videogameshub.netlify.app/",
     },
     {
-      id: 2,
+      id: 3,
       "project-name": "Moshify",
       "video-status": true,
       "github-link": "https://github.com/adithya61/moshify",
@@ -26,7 +41,7 @@ const Projects = () => {
       "live-link": "https://moshify-web-project.netlify.app/",
     },
     {
-      id: 3,
+      id: 4,
       "project-name": "Intract",
       "video-status": false,
       "github-link": "https://github.com/adithya61/Cryptomeme",
@@ -37,7 +52,7 @@ const Projects = () => {
       "live-link": "https://cryptomeme.netlify.app/",
     },
     {
-      id: 4,
+      id: 5,
       "project-name": "Vidly",
       "video-status": true,
       "github-link": "https://github.com/adithya61/vidly",
@@ -87,29 +102,29 @@ const Projects = () => {
                 </div>
                 <div className="flex justify-end items-center gap-3">
                   <span
-                    className="hover:bg-blue-300 hover:bg-opacity-20 rounded-lg px-2 py-1
+                    className=" hover:bg-opacity-20 rounded-lg px-2 py-1
                   "
                   >
                     <a
                       href={project["live-link"]}
                       className="cursor-pointer
-                        border-mango text-sm no-underline hover:underline font-medium text-blue-400 underline rounded-md"
+                         text-sm no-underline hover:underline hover:bg-gray-200 bg-gray-100 px-3 py-2 font-semibold text-gray-800 rounded-md"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Live
+                        Live
                     </a>
                   </span>
                   <a
                     href={project["github-link"]}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-2 py-2 hover:bg-gray-300 rounded-lg hover:bg-opacity-20"
+                    className="px-3 py-1 bg-white hover:bg-gray-200 rounded-lg"
                   >
                     <FiGithub
                       className="cursor-pointer "
                       size={"30"}
-                      color="lightGray"
+                      color="black"
                     />
                   </a>
                   {project["video-status"] && (
@@ -117,7 +132,7 @@ const Projects = () => {
                       href={project["video-link"]}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-2 py-2 hover:bg-[#ff6347] hover:bg-opacity-20 rounded-lg"
+                      className="px-3 py-1 bg-white hover:bg-gray-200  rounded-lg"
                     >
                       <FaYoutube
                         className="cursor-pointer"

@@ -16,7 +16,7 @@ const Socials = () => {
       id: 2,
       child: (
         <>
-          Github <FaGithub size={30} fill="charcol" />
+          Github <FaGithub size={30} fill="black" />
         </>
       ),
       href: "https://www.github.com/adithya61/",
@@ -25,7 +25,7 @@ const Socials = () => {
       id: 3,
       child: (
         <>
-          Mail <CiMail size={30} fill="tomato" />
+          Mail <CiMail size={30} fill="black" />
         </>
       ),
       href: "zonic662@gmail.com",
@@ -40,7 +40,7 @@ const Socials = () => {
             key={id}
             className="flex
          justify-between items-center w-40 h-14 
-         px-4 bg-beige ml-[-100px]
+         px-4 bg-yellow-300 ml-[-100px]
           hover:ml-0 hover:rounded-md duration-300 border-b-2 border-gray-300"
           >
             <a

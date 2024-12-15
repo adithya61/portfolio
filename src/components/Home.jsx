@@ -36,9 +36,9 @@ const Home = () => {
               to="projects"
               smooth
               duration={500}
-              className=" group text-lg text-white font-semibold w-fit px-5 py-1
+              className=" group text-lg text-white font-medium w-fit px-5 py-1
                  my-2 flex items-center rounded-lg  border-r-4 border-b-4
-                 cursor-pointer border-l-[1px] border-t-[1px] "
+                 cursor-pointer border-l-[1px] border-t-[1px]  bg-violet-600 hover:bg-violet-500"
             >
               Projects
             </Link>
@@ -46,11 +46,10 @@ const Home = () => {
               href="https://chiti.netlify.app/assets/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className=" group text-lg text-white font-semibold w-fit px-5 py-1
+              className=" group text-lg text-white font-medium w-fit px-5 py-1
                  my-2 flex items-center rounded-lg border-r-4 border-b-4
                   border-b-white border-l-[1px] border-t-[1px]
-                   hover:bg-[#b39ac2]
-                 cursor-pointer"
+                 cursor-pointer bg-violet-600 hover:bg-violet-500 "
             >
               Resume
             </a>
@@ -61,25 +60,25 @@ const Home = () => {
               href="https://www.linkedin.com/in/adithya61/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:bg-[#ff6347] px-2 py-2 rounded-lg"
+              className="bg-white hover:bg-gray-200 px-2 py-2 rounded-lg"
             >
-              <FaLinkedin size={30} />
+              <FaLinkedin color="blue" size={30} />
             </a>
             <a
               href="https://github.com/adithya61/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:bg-[#ff6347] px-2 py-2 rounded-lg"
+              className="bg-white hover:bg-gray-200 px-2 py-2 rounded-lg"
             >
-              <FaGithub size={30} />
+              <FaGithub size={30} color="black" />
             </a>
             <a
               href="https://leetcode.com/u/adithya61/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:bg-[#ff6347] px-2 py-2 rounded-lg"
+              className=" bg-white hover:bg-gray-200 px-2 py-2 rounded-lg"
             >
-              <SiLeetcode size={30} />
+              <SiLeetcode size={30} color="black" />
             </a>
           </div>
         </div>

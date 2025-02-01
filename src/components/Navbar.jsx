@@ -28,7 +28,7 @@ const Navbar = () => {
     <div
       className="flex  justify-between items-center w-full 
       h-20 text-white fixed
-     px-20"
+      md:px-10"
     >
       <h1 className="text-5xl font-signature ml-2">Adithya</h1>
       <ul className="hidden md:flex">

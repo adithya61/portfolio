@@ -14,11 +14,11 @@ const Home = () => {
         className=" flex flex-col md:flex-row justify-center items-center px-0 md:px-20 lg:px-auto
         gap-[3rem] md:gap-[5rem] lg:gap-[5rem]"
       >
-        <div className="w-[100%] lg:w-auto px-8 lg:px-20 md:px-0">
+        <div className=" px-10 lg:px-20 md:px-0">
           <img
             src={heroImage}
             alt="Adithya's photo"
-            className=" rounded-full size-52 object-cover object-center"
+            className=" rounded-full size-40 md:size-48 object-cover"
           />
         </div>
         <div className="flex flex-col justify-center items-start h-full px-4 md:px-0 md:mt-[3rem]">
@@ -30,7 +30,7 @@ const Home = () => {
             Reactjs, Javascript, Typescript, HTML, CSS.
           </p>
           {/* Button */}
-          <div className="flex flex-row justify-between gap-7 sm:mb-6">
+          <div className="flex flex-row justify-between gap-7 ">
             <Link
               to="projects"
               smooth

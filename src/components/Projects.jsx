@@ -63,6 +63,18 @@ const Projects = () => {
         "Reactjs, GCP (backend hosting) jwt (auth), joi (form validation), sentry (error monitoring), mongodb (database)",
       "live-link": "https://vidly-react-project.netlify.app/",
     },
+    {
+      id: 6,
+      "project-name": "Zenith",
+      "video-status": false,
+      "github-link": "https://github.com/adithya61/zineth",
+      "video-link": "",
+      "desc-1": "A classic IT cosultancy landing page",
+      "desc-2": "",
+      "tech-stack":
+        "Reactjs, javascript, HTML5, TailwindCSS, ",
+      "live-link": "https://zinethmvp.vercel.app/",
+    },
   ];
 
   return (

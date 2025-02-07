@@ -13,7 +13,7 @@ const Projects = () => {
         "Collaborative Universe: Zentry is a vibrant, content-rich ecosystem that connects users through games, social platforms, and various experiences.",
       "desc-2":
         "Unified Play Economy: It aims to unite gamers from diverse backgrounds into a singular, rewarding gaming experience.",
-      "tech-stack": "ReactJs, Gsap (animation lib.), TailwindCSS, javascript",
+      "tech-stack": "ReactJs, Gsap (animation lib.), google sheets API, TailwindCSS, javascript",
       "live-link": "https://awwwardss.netlify.app/",
     },
     {

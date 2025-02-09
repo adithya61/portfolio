@@ -13,7 +13,8 @@ const Projects = () => {
         "Collaborative Universe: Zentry is a vibrant, content-rich ecosystem that connects users through games, social platforms, and various experiences.",
       "desc-2":
         "Unified Play Economy: It aims to unite gamers from diverse backgrounds into a singular, rewarding gaming experience.",
-      "tech-stack": "ReactJs, Gsap (animation lib.), google sheets API, TailwindCSS, javascript",
+      "tech-stack":
+        "ReactJs, Gsap (animation lib.), google sheets API, TailwindCSS, javascript",
       "live-link": "https://awwwardss.netlify.app/",
     },
     {
@@ -23,10 +24,11 @@ const Projects = () => {
       "github-link": "https://github.com/adithya61/GameHub",
       "video-link": "https://youtu.be/u8r9gBMkwn8",
       "desc-1":
-        "Personalized Recommendations: The platform offers tailored game suggestions based on user preferences, enhancing the gaming experience and helping users connect with friends.",
+        "The platform offers tailored game suggestions based on user preferences, enhancing the gaming experience and helping users connect with friends.",
       "desc-2":
-        "Comprehensive Game Database: RAWG is the largest video game database, featuring over 500,000 games, allowing users to discover and track their favorite titles easily.",
-      "tech-stack": "ReactJs,TypeScript,JavaScript,Chakra UI",
+        "RAWG is the largest video game database, featuring over 500,000 games, allowing users to discover and track their favorite titles easily.",
+      "tech-stack":
+        "ReactJs,TypeScript,JavaScript, Rawg API, tanstack Query (caching), Chakra UI",
       "live-link": "https://videogameshub.netlify.app/",
     },
     {
@@ -71,8 +73,7 @@ const Projects = () => {
       "video-link": "",
       "desc-1": "A classic IT cosultancy landing page",
       "desc-2": "",
-      "tech-stack":
-        "Reactjs, javascript, HTML5, TailwindCSS, ",
+      "tech-stack": "Reactjs, javascript, HTML5, TailwindCSS, ",
       "live-link": "https://zinethmvp.vercel.app/",
     },
   ];
@@ -104,14 +105,14 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className=" w-full border-[1px] rounded-md border-purple-100"
+              className=" w-full border-[1px] rounded-md border-white"
             >
-              <div className="flex flex-row justify-between px-5 py-5">
-                <div>
-                  <span className="text-2xl font-semibold text-indigo-400 pb-3">
+              <div className="flex flex-row justify-between items-center px-5 py-5">
+                {/* <div> */}
+                  <span className="text-3xl font-medium pt-3 text-center text-blue-400 pb-3">
                     {project["project-name"]}
                   </span>
-                </div>
+                {/* </div> */}
                 <div className="flex justify-end items-center gap-3">
                   <span
                     className=" hover:bg-opacity-20 rounded-lg px-2 py-1
@@ -157,14 +158,14 @@ const Projects = () => {
               </div>
 
               {/* content */}
-              <div className="flex flex-col items-start px-5 grotesk">
-                <span className="text-base text-white pt-1 mt-2 roboto-mono-special">
-                  {project["desc-1"]}
+              <div className="flex flex-col font-medium tracking-wider text-4xl  items-start px-5 leading-10">
+                <span className="text-base text-white pt-1 mt-2 ">
+                  <span className="text-2xl">&#x2022;</span> {project["desc-1"]}
                 </span>
-                <span className="text-base text-white roboto-mono-special">
-                  {project["desc-2"]}
+                <span className="text-base text-white mt-2">
+                  <span className="text-2xl">&#x2022;</span> {project["desc-2"]}
                 </span>{" "}
-                <span className="text-base text-paleGreen pt-4 pb-5">
+                <span className="text-base text-paleGreen mt-3 pt-4 pb-5">
                   {project["tech-stack"]}
                 </span>
               </div>

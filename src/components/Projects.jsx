@@ -71,8 +71,8 @@ const Projects = () => {
       "video-status": false,
       "github-link": "https://github.com/adithya61/zineth",
       "video-link": "",
-      "desc-1": "A classic IT cosultancy landing page",
-      "desc-2": "",
+      "desc-1": "A IT cosultancy landing page.",
+      "desc-2": "Built with latest tech. stack.",
       "tech-stack": "Reactjs, javascript, HTML5, TailwindCSS, ",
       "live-link": "https://zinethmvp.vercel.app/",
     },
@@ -109,9 +109,9 @@ const Projects = () => {
             >
               <div className="flex flex-row justify-between items-center px-5 py-5">
                 {/* <div> */}
-                  <span className="text-3xl font-medium pt-3 text-center text-blue-400 pb-3">
-                    {project["project-name"]}
-                  </span>
+                <span className="text-3xl font-medium pt-3 text-center text-blue-400 pb-3">
+                  {project["project-name"]}
+                </span>
                 {/* </div> */}
                 <div className="flex justify-end items-center gap-3">
                   <span

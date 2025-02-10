@@ -1,4 +1,4 @@
-import heroImage from "../assets/images/profile_picture.png";
+import heroImage from "../assets/images/profile_picture.jpg";
 import { Link } from "react-scroll";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
@@ -18,7 +18,7 @@ const Home = () => {
           <img
             src={heroImage}
             alt="Adithya's photo"
-            className=" rounded-full size-40 md:size-48 object-cover"
+            className=" rounded-full size-40 md:size-48 object-cover mix-blend-screen"
           />
         </div>
         <div className="flex flex-col justify-center items-start h-full px-4 md:px-0 md:mt-[3rem]">
@@ -35,7 +35,7 @@ const Home = () => {
               to="projects"
               smooth
               duration={500}
-              className=" group text-lg text-black font-medium w-fit px-5 py-1
+              className=" group text-lg text-gray-900 font-medium tracking-wide w-fit px-5 py-1
                  my-2 flex items-center rounded-lg  bg-[#FEFEFF] hover:bg-gray-200 cursor-pointer"
             >
               Projects
@@ -44,15 +44,15 @@ const Home = () => {
               href="https://chiti.netlify.app/assets/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className=" group text-lg text-gray-950 font-medium w-fit px-5 py-1
+              className=" group text-lg text-gray-900 font-medium w-fit px-5 py-1
                  my-2 flex items-center rounded-lg 
-                 cursor-pointer bg-[#FEFEFF] hover:bg-slate-200 "
+                 cursor-pointer bg-[#FEFEFF] tracking-wide hover:bg-slate-200 "
             >
               Resume
             </a>
           </div>
           {/* Socials */}
-          <div className="flex gap-5">
+          <div className="flex gap-7 mt-6">
             <a
               href="https://www.linkedin.com/in/adithya61/"
               target="_blank"

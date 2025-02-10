@@ -6,10 +6,10 @@ const Contact = () => {
       mx-auto h-full"
       >
         <div className="pb-8">
-          <p className=" heading text-4xl font-bold border-b-4 text-beige inline border-gray-500">
+          <p className=" heading text-4xl font-bold text-white inline">
             Contact
           </p>
-          <p className=" py-6">
+          <p className=" py-6 text-xl">
             Submit the Form below to get in touch with me.
           </p>
         </div>
@@ -24,14 +24,14 @@ const Contact = () => {
               name="Name"
               placeholder="Enter your name"
               className=" p-2 bg-transparent border border-white text-white border-opacity-50
-               focus:outline-plum"
+               focus:outline-blue-300"
             />
             <input
               type="text"
               name="Email"
               placeholder="Enter your Email"
               className=" my-4 p-2 bg-transparent border border-white border-opacity-50 text-white
-               focus:outline-plum"
+               focus:outline-blue-300"
             />
             <textarea
               placeholder="Enter your message"
@@ -40,7 +40,7 @@ const Contact = () => {
               className="
              p-2 rounded-md bg-transparent border
               border-white border-opacity-50
-              text-white focus:outline-plum"
+              text-white focus:outline-blue-300"
             ></textarea>
             <button
               type="submit"

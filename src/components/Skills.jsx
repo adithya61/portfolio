@@ -60,13 +60,10 @@ const Skills = () => {
         text-white"
       >
         <div>
-          <p
-            className=" heading text-4xl font-bold border-b-4
-           border-gray-500 p-2 inline text-beige"
-          >
+          <p className=" heading text-4xl font-bold inline text-white">
             Skills
           </p>
-          <p className=" py-6">
+          <p className=" py-6 text-xl">
             These are the tecnologies I have worked with..
           </p>
         </div>

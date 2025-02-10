@@ -90,10 +90,7 @@ const Projects = () => {
       flex flex-col justify-center w-full h-full"
       >
         <div className="pb-8">
-          <p
-            className=" heading text-4xl font-bold inline
-           border-b-4 border-gray-500 text-beige"
-          >
+          <p className=" heading text-4xl font-bold inline text-white">
             Projects
           </p>
         </div>
@@ -108,11 +105,9 @@ const Projects = () => {
               className=" w-full border-[1px] rounded-md border-white"
             >
               <div className="flex flex-row justify-between items-center px-5 py-5">
-                {/* <div> */}
-                <span className="text-3xl font-medium pt-3 text-center text-blue-400 pb-3">
-                  {project["project-name"]}
+                <span className="text-3xl montserrat font-semibold pt-3 text-center text-[#37BCF8] pb-3">
+                  {project["project-name"]} {/* Project Heading */}
                 </span>
-                {/* </div> */}
                 <div className="flex justify-end items-center gap-3">
                   <span
                     className=" hover:bg-opacity-20 rounded-lg px-2 py-1

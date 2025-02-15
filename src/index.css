@@ -4,28 +4,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Delius&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&display=swap");
-
-.delius-unicase-regular {
-  font-family: "Delius Unicase", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.delius-unicase-bold {
-  font-family: "Delius Unicase", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.delius-regular {
-  font-family: "Delius", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .montserrat {
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
@@ -59,13 +37,14 @@
 @layer base {
   html {
     font-family: "Raleway", sans-serif;
+    background-color: #343434;
   }
 }
 
 .nav-text {
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-style: bold;
+  font-size: 1.25rem;
 }
 
 .hero-text {
@@ -94,7 +73,11 @@
 
 .heading {
   font-weight: 500;
+  
 }
+
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 300 to 700 */
 
 .grotesk {
   font-family: "Space Grotesk", sans-serif;
@@ -103,7 +86,9 @@
 }
 
 .name {
-  color: rgb(6, 0, 0);
+  background: -webkit-linear-gradient(90deg, #ff7170 -50.34%, #ffe57f 100.78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .group {

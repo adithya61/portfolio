@@ -4,6 +4,14 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+
+.gowun-dodum-regular {
+  font-family: "Gowun Dodum", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .montserrat {
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
@@ -37,14 +45,14 @@
 @layer base {
   html {
     font-family: "Raleway", sans-serif;
-    background-color: #343434;
+    background-color: #222121;
   }
 }
 
 .nav-text {
-  font-weight: 600;
+  font-weight: 400;
   font-style: bold;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .hero-text {
@@ -73,7 +81,6 @@
 
 .heading {
   font-weight: 500;
-  
 }
 
 /* <uniquifier>: Use a unique and descriptive class name */

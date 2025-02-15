@@ -18,7 +18,7 @@ const Home = () => {
           <img
             src={heroImage}
             alt="Adithya's photo"
-            className=" rounded-full size-40 md:size-48 object-cover mix-blend-screen"
+            className=" rounded-full size-40 md:size-48 object-cover "
           />
         </div>
         <div className="flex flex-col justify-center items-start h-full px-4 md:px-0 md:mt-[3rem]">

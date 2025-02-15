@@ -105,7 +105,7 @@ const Projects = () => {
               className=" w-full border-[1px] rounded-md border-white"
             >
               <div className="flex flex-row justify-between items-center px-5 py-5">
-                <span className="text-3xl montserrat font-semibold pt-3 text-center text-[#37BCF8] pb-3">
+                <span className="text-[1.7rem] md:text-3xl gowun-dodum-regular  font-semibold pt-3 text-center text-[#37BCF8] pb-3">
                   {project["project-name"]} {/* Project Heading */}
                 </span>
                 <div className="flex justify-end items-center gap-3">
@@ -153,7 +153,7 @@ const Projects = () => {
               </div>
 
               {/* content */}
-              <div className="flex flex-col font-medium tracking-wider text-4xl  items-start px-5 leading-10">
+              <div className="flex flex-col font-medium tracking-wider text-[1rem]  items-start px-5 leading-10">
                 <span className="text-base text-white pt-1 mt-2 ">
                   <span className="text-2xl">&#x2022;</span> {project["desc-1"]}
                 </span>

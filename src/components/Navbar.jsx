@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <div
       className="flex  justify-between items-center w-full 
-      h-20 text-white fixed
+      h-20 text-black fixed
       md:px-10"
     >
       <h1 className="text-5xl font-signature ml-2">Adithya</h1>
@@ -36,7 +36,7 @@ const Navbar = () => {
           <li
             key={link.id}
             className="px-4 cursor-pointer capitalize nav-text
-            text-honeyDew font-light hover:scale-110 hover:text-gray-300 hover:underline duration-200
+            text-black font-light hover:scale-101 hover:text-red-400 hover:underline duration-200
             "
           >
             <Link to={link.name} smooth duration={500}>

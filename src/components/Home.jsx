@@ -22,10 +22,10 @@ const Home = () => {
           />
         </div>
         <div className="flex flex-col justify-center items-start h-full px-4 md:px-0 md:mt-[3rem]">
-          <h2 className=" text-4xl md:text-5xl lg:text-3xl font-bold name ">
-            Adithya T R
+          <h2 className=" text-4xl md:text-5xl lg:text-3xl font-bold delius-regular name ">
+            <spam className="text-4xl delius-regular">A</spam>dithya
           </h2>
-          <p className=" text-red-400 pt-8 pb-8 font-medium  max-w-xl grotesk text-lg">
+          <p className=" text-red-600 pt-8 pb-8 font-medium  max-w-xl text-lg">
             I love to work on Web Application&apos;s with technologies like
             Reactjs, Javascript, Typescript, HTML, CSS.
           </p>
@@ -35,8 +35,8 @@ const Home = () => {
               to="projects"
               smooth
               duration={500}
-              className=" group text-lg text-gray-900 font-medium tracking-wide w-fit px-5 py-1
-                 my-2 flex items-center rounded-lg  bg-[#FEFEFF] hover:bg-gray-200 cursor-pointer"
+              className=" group text-lg text-black font-medium tracking-wide w-fit px-6 py-2
+                 my-2 flex items-center delius-unicase-regular rounded-lg  bg-[#D3D3D3] hover:bg-gray-200 cursor-pointer"
             >
               Projects
             </Link>
@@ -44,9 +44,9 @@ const Home = () => {
               href="https://chiti.netlify.app/assets/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className=" group text-lg text-gray-900 font-medium w-fit px-5 py-1
+              className=" group text-lg text-black font-medium w-fit px-6 py-2
                  my-2 flex items-center rounded-lg 
-                 cursor-pointer bg-[#FEFEFF] tracking-wide hover:bg-slate-200 "
+                 cursor-pointer bg-[#FEFEFF] delius-unicase-regular tracking-wide hover:bg-slate-200 "
             >
               Resume
             </a>

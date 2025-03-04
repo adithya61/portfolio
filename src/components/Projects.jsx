@@ -1,5 +1,5 @@
 import { FiGithub } from "react-icons/fi";
-import { FaYoutube } from "react-icons/fa";
+import { FaLink, FaYoutube } from "react-icons/fa";
 
 const Projects = () => {
   const projects = [
@@ -28,7 +28,7 @@ const Projects = () => {
       "desc-2":
         "RAWG is the largest video game database, featuring over 500,000 games, allowing users to discover and track their favorite titles easily.",
       "tech-stack":
-        "ReactJs,TypeScript,JavaScript, Rawg API, tanstack Query (caching), Chakra UI",
+        "ReactJs,TypeScript,JavaScript, Rawg API, Tanstack Query (caching), Chakra UI",
       "live-link": "https://videogameshub.netlify.app/",
     },
     {
@@ -102,10 +102,10 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className=" w-full border-[1px] rounded-md border-white"
+              className=" w-full p-2 border-[1px] rounded-md border-white"
             >
-              <div className="flex flex-row justify-between items-center px-5 py-5">
-                <span className="text-[1.7rem] md:text-3xl gowun-dodum-regular  font-semibold pt-3 text-center text-[#37BCF8] pb-3">
+              <div className="flex flex-row justify-between items-center px-5 pt-5">
+                <span className="text-[1.7rem] md:text-3xl poppins-bold-italic  font-semibold pt-3 text-center text-[#37BCF8] pb-3">
                   {project["project-name"]} {/* Project Heading */}
                 </span>
                 <div className="flex justify-end items-center gap-3">
@@ -116,11 +116,14 @@ const Projects = () => {
                     <a
                       href={project["live-link"]}
                       className="cursor-pointer
-                         text-sm no-underline hover:underline hover:bg-gray-200 bg-gray-100 px-3 py-2 font-semibold text-gray-800 rounded-md"
+                         text-sm no-underline inline-block hover:underline hover:bg-gray-200 bg-gray-100 px-3 py-2 font-semibold text-gray-800 rounded-md"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Live
+                      {" "}
+                      <div className="live-link" >
+                        <FaLink style={{display: "inline"}}/> Live
+                      </div>{" "}
                     </a>
                   </span>
                   <a
@@ -153,14 +156,17 @@ const Projects = () => {
               </div>
 
               {/* content */}
-              <div className="flex flex-col font-medium tracking-wider text-[1rem]  items-start px-5 leading-10">
-                <span className="text-base text-white pt-1 mt-2 ">
+              <div className="flex flex-col text-lg font-normal tracking-wider text-[1rem] montserrat  items-start px-5">
+                <span className=" leading-7 text-white pt-1 mt-2 ">
                   <span className="text-2xl">&#x2022;</span> {project["desc-1"]}
                 </span>
-                <span className="text-base text-white mt-2">
+                <span className=" leading-7 text-white mt-2">
                   <span className="text-2xl">&#x2022;</span> {project["desc-2"]}
                 </span>{" "}
-                <span className="text-base text-paleGreen mt-3 pt-4 pb-5">
+                <span className="montserrat text-lg font-semibold mt-7">
+                  Tech Stack
+                </span>
+                <span className="text-base text-white poppins-light-italic leading-7 tracking-wider pt-1.5  pb-5">
                   {project["tech-stack"]}
                 </span>
               </div>

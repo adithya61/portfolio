@@ -22,10 +22,10 @@ const Home = () => {
           />
         </div>
         <div className="flex flex-col justify-center items-start h-full px-4 md:px-0 md:mt-[3rem]">
-          <h2 className=" text-4xl md:text-5xl lg:text-3xl font-bold name ">
+          <h2 className=" text-4xl inter md:text-5xl lg:text-4xl poppins-regular name ">
             Adithya T R
           </h2>
-          <p className=" text-red-400 pt-8 pb-8 font-medium  max-w-xl grotesk text-lg">
+          <p className=" text-red-400 pt-8 pb-8 font-medium  max-w-xl inter leading-8 tracking-wide text-lg">
             I love to work on Web Application&apos;s with technologies like
             Reactjs, Javascript, Typescript, HTML, CSS.
           </p>
@@ -35,8 +35,8 @@ const Home = () => {
               to="projects"
               smooth
               duration={500}
-              className=" group text-lg text-gray-900 font-medium tracking-wide w-fit px-5 py-1
-                 my-2 flex items-center rounded-lg  bg-[#FEFEFF] hover:bg-gray-200 cursor-pointer"
+              className=" group text-lg text-gray-900 font-medium tracking-wide w-fit px-5 py-1.5
+                 my-2 flex items-center rounded-lg poppins-bold-italic  bg-[#FEFEFF] hover:bg-gray-200 cursor-pointer"
             >
               Projects
             </Link>
@@ -46,7 +46,7 @@ const Home = () => {
               rel="noopener noreferrer"
               className=" group text-lg text-gray-900 font-medium w-fit px-5 py-1
                  my-2 flex items-center rounded-lg 
-                 cursor-pointer bg-[#FEFEFF] tracking-wide hover:bg-slate-200 "
+                 cursor-pointer bg-[#FEFEFF] tracking-wide poppins-bold-italic hover:bg-slate-200 "
             >
               Resume
             </a>

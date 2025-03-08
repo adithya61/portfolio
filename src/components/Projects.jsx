@@ -4,20 +4,6 @@ import { FaLink, FaYoutube } from "react-icons/fa";
 const Projects = () => {
   const projects = [
     {
-      id: 1,
-      "project-name": "Awwwards",
-      "video-status": false,
-      "github-link": "https://github.com/adithya61/zentry",
-      "video-link": "",
-      "desc-1":
-        "Collaborative Universe: Zentry is a vibrant, content-rich ecosystem that connects users through games, social platforms, and various experiences.",
-      "desc-2":
-        "Unified Play Economy: It aims to unite gamers from diverse backgrounds into a singular, rewarding gaming experience.",
-      "tech-stack":
-        "ReactJs, Gsap (animation lib.), google sheets API, TailwindCSS, javascript",
-      "live-link": "https://awwwardss.netlify.app/",
-    },
-    {
       id: 2,
       "project-name": "Gamehub",
       "video-status": true,
@@ -73,7 +59,8 @@ const Projects = () => {
       "video-link": "",
       "desc-1": "A IT cosultancy landing page.",
       "desc-2": "Built with latest tech. stack.",
-      "tech-stack": "Reactjs, javascript, HTML5, TailwindCSS, ",
+      "tech-stack":
+        "Reactjs, javascript, HTML5, TailwindCSS, Google Sheets API`",
       "live-link": "https://zinethmvp.vercel.app/",
     },
   ];
@@ -121,8 +108,8 @@ const Projects = () => {
                       rel="noopener noreferrer"
                     >
                       {" "}
-                      <div className="live-link" >
-                        <FaLink style={{display: "inline"}}/> Live
+                      <div className="live-link">
+                        <FaLink style={{ display: "inline" }} /> Live
                       </div>{" "}
                     </a>
                   </span>

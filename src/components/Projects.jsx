@@ -5,6 +5,19 @@ const Projects = () => {
   const projects = [
     {
       id: 2,
+      "project-name": "Zentry",
+      "video-status": false,
+      "github-link": "https://github.com/adithya61/zentry",
+      "video-link": "",
+      "desc-1": "Metagame Layer repository! This project is inspired by Zentry",
+      "desc-2":
+        "Collaborative Universe: Zentry is a vibrant, content-rich ecosystem that connects users through games, social platforms, and various experiences.",
+      "tech-stack":
+        "ReactJs,TypeScript,JavaScript, Rawg API, Tanstack Query (caching), Chakra UI",
+      "live-link": "https://awwwardss.netlify.app/",
+    },
+    {
+      id: 2,
       "project-name": "Gamehub",
       "video-status": true,
       "github-link": "https://github.com/adithya61/GameHub",

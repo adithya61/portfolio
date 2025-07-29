@@ -102,10 +102,10 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className=" w-full p-2 border-[1px] rounded-md border-white"
+              className=" w-full bg-[#F9F4DA] p-2 border-[1px] rounded-md border-white"
             >
               <div className="flex flex-row justify-between items-center px-5 pt-5">
-                <span className="text-[1.7rem] md:text-3xl poppins-bold-italic  font-semibold pt-3 text-center text-[#37BCF8] pb-3">
+                <span className="text-[1.7rem] md:text-3xl poppins-bold-italic  font-semibold pt-3 text-center text-black">
                   {project["project-name"]} {/* Project Heading */}
                 </span>
                 <div className="flex justify-end items-center gap-3">
@@ -116,7 +116,7 @@ const Projects = () => {
                     <a
                       href={project["live-link"]}
                       className="cursor-pointer
-                         text-sm no-underline inline-block hover:underline hover:bg-gray-200 bg-gray-100 px-3 py-2 font-semibold text-gray-800 rounded-md"
+                         text-sm no-underline inline-block hover:underline btn-projects-card  px-3 py-2 font-semibold text-gray-800 rounded-md"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -130,7 +130,7 @@ const Projects = () => {
                     href={project["github-link"]}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-1 bg-white hover:bg-gray-200 rounded-lg"
+                    className="px-3 py-1 btn-projects-card  rounded-lg"
                   >
                     <FiGithub
                       className="cursor-pointer "
@@ -143,7 +143,7 @@ const Projects = () => {
                       href={project["video-link"]}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-1 bg-white hover:bg-gray-200  rounded-lg"
+                      className="px-3 py-1 btn-projects-card   rounded-lg"
                     >
                       <FaYoutube
                         className="cursor-pointer"
@@ -156,20 +156,19 @@ const Projects = () => {
               </div>
 
               {/* content */}
-              <div className="flex flex-col text-lg font-normal tracking-wider text-[1rem] montserrat  items-start px-5">
-                <span className=" leading-7 text-white pt-1 mt-2 ">
-                  <span className="text-2xl">&#x2022;</span> {project["desc-1"]}
-                </span>
-                <span className=" leading-7 text-white mt-2">
-                  <span className="text-2xl">&#x2022;</span> {project["desc-2"]}
-                </span>{" "}
-                <span className="montserrat text-lg font-semibold mt-7">
+              <ul className="text-lg font-light tracking-wider text-[1rem] outfit  items-start px-5 list-disc p-2">
+                <li className=" leading-6 text-black pb-2">
+                    {project["desc-1"]}
+                </li>
+                <li className=" leading-6 text-black"> {project["desc-2"]}
+                </li>{" "}
+                <div className="montserrat text-lg text-black font-semibold mt-6">
                   Tech Stack
-                </span>
-                <span className="text-base text-white poppins-light-italic leading-7 tracking-wider pt-1.5  pb-5">
+                </div>
+                <span className="text-base text-black poppins-light-italic leading-7 tracking-wider pt-1.5  pb-5">
                   {project["tech-stack"]}
                 </span>
-              </div>
+              </ul>
             </div>
           ))}
         </div>

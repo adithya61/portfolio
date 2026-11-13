@@ -1,0 +1,699 @@
+/* ==========================================================================
+   Portfolio styles
+
+   Contents
+   1. Design tokens (colour, type) with light and dark themes
+   2. Base
+   3. Layout
+   4. Components, in page order:
+      skip link, site header, buttons, hero, build log, highlights,
+      sections, project cards, contributions, skills, contact, footer
+   5. Reduced motion
+
+   Class names follow BEM: block, block__element, block--modifier.
+   Colours and fonts come from the tokens below; no component uses a literal colour.
+   ========================================================================== */
+
+
+/* 1. Design tokens
+   -------------------------------------------------------------------------- */
+
+:root {
+  /* Surfaces and text */
+  --color-bg: #f1f4f2;
+  --color-surface: #ffffff;
+  --color-text: #13201a;
+  --color-text-muted: #566660;
+  --color-border: #d3dcd7;
+
+  /* Interactive and status */
+  --color-accent: #2145e6;
+  --color-on-accent: #ffffff;
+  --color-pass: #0c7c47;
+
+  /* The build log is a dark object in both themes */
+  --color-terminal-bg: #0f1713;
+  --color-terminal-text: #dce8e1;
+  --color-terminal-muted: #7f9488;
+  --color-terminal-pass: #4ade80;
+  --color-terminal-fail: #f87171;
+  --color-terminal-border: #25322b;
+
+  --font-display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Instrument Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  --radius-card: 8px;
+  --radius-control: 6px;
+  --content-width: 1120px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --color-bg: #0c1210;
+    --color-surface: #131b17;
+    --color-text: #e7efea;
+    --color-text-muted: #93a59b;
+    --color-border: #24302a;
+    --color-accent: #8ca4ff;
+    --color-on-accent: #0c1210;
+    --color-pass: #4ade80;
+    --color-terminal-bg: #080d0b;
+    --color-terminal-border: #2a3830;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --color-bg: #0c1210;
+  --color-surface: #131b17;
+  --color-text: #e7efea;
+  --color-text-muted: #93a59b;
+  --color-border: #24302a;
+  --color-accent: #8ca4ff;
+  --color-on-accent: #0c1210;
+  --color-pass: #4ade80;
+  --color-terminal-bg: #080d0b;
+  --color-terminal-border: #2a3830;
+  color-scheme: dark;
+}
+
+
+/* 2. Base
+   -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font: 400 1rem/1.6 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Paints the phone's status-bar area in the page colour when the header sticks. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 30;
+  background: var(--color-bg);
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+
+/* 3. Layout
+   -------------------------------------------------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: var(--content-width);
+  margin-inline: auto;
+  padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px));
+}
+
+
+/* 4. Components
+   -------------------------------------------------------------------------- */
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 40;
+  padding: 0.6rem 1rem;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  border-radius: var(--radius-control);
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Site header */
+.site-header {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 20;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.75rem;
+}
+
+.site-header__brand {
+  font: 700 1.05rem/1 var(--font-display);
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.9rem;
+  font-size: 0.85rem;
+}
+
+.site-nav__link {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.site-nav__link:hover {
+  color: var(--color-text);
+}
+
+.status-pill {
+  display: none;
+  align-items: center;
+  gap: 0.45rem;
+  font: 500 0.75rem/1 var(--font-mono);
+  color: var(--color-pass);
+}
+
+.status-pill::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-pass);
+}
+
+@media (min-width: 640px) {
+  .site-nav {
+    gap: 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .status-pill {
+    display: inline-flex;
+  }
+}
+
+/* Buttons */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.1rem;
+  border: 1px solid var(--color-text);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.button--primary {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.button--primary:hover {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  filter: brightness(1.08);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  align-items: start;
+  gap: 2.5rem;
+  padding-block: clamp(2.5rem, 7vw, 5rem) 2.5rem;
+}
+
+.hero > * {
+  min-width: 0;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: 3.5rem;
+  }
+}
+
+.hero__eyebrow {
+  margin: 0 0 1.25rem;
+  color: var(--color-text-muted);
+  font: 500 0.8rem/1.4 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero__title {
+  margin: 0 0 1.25rem;
+  font: 700 clamp(2.6rem, 7vw, 4.6rem) / 1 var(--font-display);
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.hero__lead {
+  max-width: 34rem;
+  margin: 0 0 1.75rem;
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+/* Build log */
+.build-log {
+  overflow: hidden;
+  background: var(--color-terminal-bg);
+  color: var(--color-terminal-text);
+  border: 1px solid var(--color-terminal-border);
+  border-radius: 10px;
+  font-family: var(--font-mono);
+}
+
+.build-log__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--color-terminal-border);
+  color: var(--color-terminal-muted);
+  font-size: 0.78rem;
+}
+
+.build-log__dots {
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.build-log__dots i {
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--color-terminal-border);
+}
+
+.build-log__title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.build-log__rerun {
+  padding: 0.4rem 0.65rem;
+  border: 1px solid var(--color-terminal-border);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--color-terminal-text);
+  font: 500 0.75rem/1 var(--font-mono);
+  cursor: pointer;
+}
+
+.build-log__rerun:hover {
+  border-color: var(--color-terminal-muted);
+}
+
+.build-log__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0.9rem 1rem 0;
+  list-style: none;
+}
+
+.build-log__step {
+  display: grid;
+  grid-template-columns: 1.1rem minmax(0, 1fr);
+  column-gap: 0.7rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.build-log__mark {
+  display: flex;
+  grid-row: 1 / span 2;
+  justify-content: center;
+  padding-top: 0.2rem;
+}
+
+.build-log__name {
+  font-weight: 500;
+}
+
+.build-log__detail {
+  grid-column: 2;
+  color: var(--color-terminal-muted);
+  overflow-wrap: anywhere;
+}
+
+.build-log__attempts {
+  margin-left: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+.build-log__attempt--fail {
+  color: var(--color-terminal-fail);
+}
+
+.build-log__attempt--pass {
+  color: var(--color-terminal-pass);
+}
+
+.build-log__summary {
+  margin: 0;
+  padding: 0.9rem 1rem 1rem;
+  color: var(--color-terminal-muted);
+  font-size: 0.85rem;
+}
+
+/* Step and summary state, set from script.js through data-state */
+.build-log__mark::before {
+  content: '·';
+  color: var(--color-terminal-muted);
+}
+
+.build-log__step[data-state='pass'] .build-log__mark::before {
+  content: '✓';
+  color: var(--color-terminal-pass);
+}
+
+.build-log__step[data-state='run'] .build-log__mark::before {
+  content: '';
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 2px solid var(--color-terminal-border);
+  border-top-color: var(--color-terminal-text);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.build-log__step[data-state='wait'] .build-log__name,
+.build-log__step[data-state='wait'] .build-log__detail {
+  opacity: 0.35;
+}
+
+.build-log__summary[data-state='pass'] {
+  color: var(--color-terminal-pass);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Highlights under the hero */
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 2.5rem;
+  margin: 0;
+  padding: 1.1rem 0;
+  border-block: 1px solid var(--color-border);
+  font-size: 0.92rem;
+  list-style: none;
+}
+
+.highlights__item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+}
+
+.highlights__value {
+  font: 700 1.15rem/1 var(--font-display);
+  white-space: nowrap;
+}
+
+.highlights__label {
+  color: var(--color-text-muted);
+}
+
+/* Sections */
+.section {
+  padding-top: clamp(2.5rem, 6vw, 4.5rem);
+  scroll-margin-top: 4.5rem;
+}
+
+.section__job {
+  margin: 0 0 0.9rem;
+  color: var(--color-text-muted);
+  font: 500 0.78rem/1 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section__job::before {
+  content: '▸ ';
+  color: var(--color-accent);
+}
+
+.section__title {
+  margin: 0 0 0.75rem;
+  font: 700 clamp(1.7rem, 4vw, 2.4rem) / 1.1 var(--font-display);
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.section__intro {
+  max-width: 40rem;
+  margin: 0 0 1.75rem;
+  color: var(--color-text-muted);
+}
+
+/* Project cards: 1 column on phones, 2 on tablets, 3 + 2 on desktop so no row is half empty */
+.project-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 620px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 940px) {
+  .project-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .project-card {
+    grid-column: span 2;
+  }
+
+  .project-card:nth-child(n + 4),
+  .project-card:last-child:nth-child(odd) {
+    grid-column: span 3;
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+  padding: 1.25rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.project-card__title {
+  margin: 0;
+  font: 700 1.2rem/1.2 var(--font-display);
+  letter-spacing: -0.015em;
+}
+
+.project-card__summary {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.project-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin-top: auto;
+  padding-top: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.project-card__links a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.project-card__links a:hover {
+  text-decoration: underline;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag-list__item {
+  padding: 0.3rem 0.45rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: var(--color-text-muted);
+  font: 500 0.72rem/1 var(--font-mono);
+}
+
+/* Open-source contributions */
+.contribution-list {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  border-top: 1px solid var(--color-border);
+  list-style: none;
+}
+
+.contribution {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contribution__title {
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contribution__title:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.contribution__meta {
+  color: var(--color-text-muted);
+  font: 400 0.8rem/1.4 var(--font-mono);
+  overflow-wrap: anywhere;
+}
+
+/* Skills */
+.skill-list {
+  display: grid;
+  gap: 1.5rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  margin: 0;
+}
+
+.skill-list__group {
+  min-width: 0;
+}
+
+.skill-list__name {
+  margin-bottom: 0.6rem;
+  color: var(--color-text-muted);
+  font: 500 0.78rem/1 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skill-list__items {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+/* Contact */
+.contact__text {
+  max-width: 36rem;
+  margin: 0 0 1.25rem;
+}
+
+.contact__email {
+  margin: 1.25rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  user-select: all;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: clamp(3rem, 8vw, 5.5rem);
+  border-top: 1px solid var(--color-border);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-block: 1.5rem 2.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+
+/* 5. Reduced motion
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .build-log__step[data-state='run'] .build-log__mark::before {
+    animation: none;
+  }
+}

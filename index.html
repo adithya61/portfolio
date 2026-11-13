@@ -1,42 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-94JRZ2QXPF"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adithya T R</title>
+  <meta name="description" content="Adithya T R, full-stack developer in Bengaluru working in React, Node and PostgreSQL. Projects, open-source contributions and resume.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Adithya T R">
+  <meta property="og:description" content="Full-stack developer in Bengaluru. Projects, open-source contributions and resume.">
 
-      gtag("config", "G-94JRZ2QXPF");
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="#top">Adithya T R</a>
+      <nav class="site-nav" aria-label="Sections">
+        <a class="site-nav__link" href="#work">Work</a>
+        <a class="site-nav__link" href="#open-source">Open source</a>
+        <a class="site-nav__link" href="#skills">Skills</a>
+        <a class="site-nav__link" href="#contact">Contact</a>
+        <span class="status-pill">build passing</span>
+      </nav>
+    </div>
+  </header>
 
-    <title>Adithya T R</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <main id="main">
+    <div class="container" id="top">
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <p class="hero__eyebrow">Bengaluru · open to remote roles</p>
+          <h1 class="hero__title" id="hero-title">Adithya T R</h1>
+          <p class="hero__lead">Full-stack developer. I build with React, Node and Postgres, and I'm moving into AI engineering. My code is public on GitHub.</p>
+          <div class="button-row">
+            <a class="button button--primary" href="#work">See the work</a>
+            <a class="button" data-link="resume">Resume ↗</a>
+            <a class="button" data-link="github">GitHub ↗</a>
+          </div>
+        </div>
+
+        <section class="build-log" aria-label="Build log for this portfolio">
+          <div class="build-log__bar">
+            <span class="build-log__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="build-log__title">portfolio · main · build log</span>
+            <button class="build-log__rerun" id="build-log-rerun" type="button">re-run</button>
+          </div>
+          <ol class="build-log__steps" id="build-log-steps"></ol>
+          <p class="build-log__summary" id="build-log-summary" data-state="pass" aria-live="polite">✓ all checks passed</p>
+        </section>
+      </section>
+
+      <ul class="highlights" id="highlights" aria-label="GitHub at a glance"></ul>
+
+      <section class="section" id="work" aria-labelledby="work-title">
+        <p class="section__job">job: work</p>
+        <h2 class="section__title" id="work-title">Things I've built</h2>
+        <p class="section__intro">Each project links to its repository. Descriptions are short on purpose; the code is the long version.</p>
+        <div class="project-grid" id="project-grid"></div>
+      </section>
+
+      <section class="section" id="open-source" aria-labelledby="open-source-title">
+        <p class="section__job">job: open-source</p>
+        <h2 class="section__title" id="open-source-title">Pull requests to other people's projects</h2>
+        <p class="section__intro">Where I've changed code that isn't mine. The full list lives on GitHub, so it is never out of date.</p>
+        <ul class="contribution-list" id="contribution-list"></ul>
+        <div class="button-row" id="contribution-actions"></div>
+      </section>
+
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <p class="section__job">job: skills</p>
+        <h2 class="section__title" id="skills-title">What I work with</h2>
+        <dl class="skill-list" id="skill-list"></dl>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <p class="section__job">job: contact</p>
+        <h2 class="section__title" id="contact-title">Let's talk</h2>
+        <p class="contact__text">Open to remote roles. The quickest way to see how I work is to read the code, then message me on LinkedIn.</p>
+        <div class="button-row" id="contact-actions"></div>
+        <p class="contact__email" id="contact-email" hidden></p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>© <span id="year">2026</span> Adithya T R</span>
+      <span>Designed and built with Claude.</span>
+    </div>
+  </footer>
+
+  <noscript>
+    <p class="container">This page builds its project list with JavaScript. The same work is on
+      <a href="https://github.com/adithya61/">GitHub</a> and <a href="https://www.linkedin.com/in/adithya61/">LinkedIn</a>.</p>
+  </noscript>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
